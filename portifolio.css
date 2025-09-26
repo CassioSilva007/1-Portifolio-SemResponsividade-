@@ -1,0 +1,746 @@
+a {
+  button#to-top {
+    padding: 30px;
+    position: fixed;
+    background-color: var(--cor-segundaria);
+    left: 95%;
+    top: 90%;
+    border-radius: 50%;
+    background-color: var(--cor-primaria);
+    color: var(--cor-segundaria);
+    border: none;
+    z-index: 100;
+    transition: ease-in 0.3s;
+  }
+  button#to-top:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px var(--cor-primaria);
+    cursor: pointer;
+  }
+}
+
+header {
+  width: 130%;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  nav {
+    animation: swing-in-top-fwd 1s forwards;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      li {
+        list-style: none;
+        font-family: var(--font-titulo);
+        font-size: var(--tamanho-font-media);
+        img {
+          width: 350px;
+          height: 200px;
+          animation: 1s slide-in-left;
+          margin-right: 475px;
+        }
+
+        button#dia-noite {
+          background-color: transparent;
+          border: none;
+
+          img {
+            width: 100px;
+            height: 100px;
+            animation: 1s slide-in-right;
+            transition: filter 0.3s ease-in-out;
+            mix-blend-mode: difference;
+            filter: drop-shadow(0px 0px 5px var(--background-dark));
+          }
+
+          img:hover {
+            filter: drop-shadow(0px 0px 5px var(--cor-primaria));
+          }
+        }
+
+        a {
+          text-decoration: none;
+          color: var(--background-dark);
+          position: relative;
+          transition: 0.3s ease-in-out;
+        }
+
+        a:hover {
+          color: var(--cor-terciaria);
+        }
+
+        a::after {
+          content: "";
+          left: 0;
+          top: 110%;
+          width: 0;
+          position: absolute;
+          height: 2px;
+          background-color: var(--cor-primaria);
+          transition: 0.3s ease-in-out;
+        }
+
+        a:hover::after {
+          width: 100%;
+        }
+      }
+
+      li:not(:last-child) {
+        margin-right: 50px;
+      }
+    }
+  }
+}
+
+section.inicio {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  div.oi {
+    margin-left: 100px;
+
+    p {
+      font-family: var(--font-titulo);
+      font-size: var(--tamanho-font-titulo);
+      animation: 1s slide-in-left;
+
+      span {
+        color: var(--cor-primaria);
+        font-size: 50pt;
+      }
+    }
+
+    p#seja-bem-vindo {
+      font-family: var(--font-texto);
+      font-size: var(--tamanho-font-media);
+      margin-top: 25px;
+      margin-left: 5px;
+    }
+  }
+
+  div.contatos {
+    width: 253px;
+    height: 75px;
+    margin-top: 50px;
+    margin-left: 5px;
+
+    img {
+      height: 75px;
+      height: 75px;
+    }
+
+    img:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  div.contatos:hover > :not(:hover) {
+    opacity: 0.5;
+  }
+  div.contatos img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  img#progamando {
+    width: 1000px;
+    height: 600px;
+    animation: 1s slide-in-fwd-right forwards;
+  }
+}
+
+hr#linha {
+  border-color: var(--cor-primaria);
+  width: 90%;
+  margin: 70px auto;
+  height: 0.5px;
+}
+
+hr#linha-pequena {
+  border-color: var(--cor-primaria);
+  width: 20%;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  height: 1px;
+}
+
+section.sobre-mim {
+  max-width: 1400px;
+  height: 200px;
+  margin: 100px auto 300px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  div.sobre-txt {
+    width: 700px;
+    text-align: justify;
+
+    h1 {
+      font-family: var(--font-titulo);
+      font-size: var(--tamanho-font-titulo);
+      margin-left: 5px;
+
+      span {
+        color: var(--cor-primaria);
+      }
+    }
+
+    p {
+      font-family: var(--font-texto);
+      padding-right: 50px;
+      font-size: var(--tamanho-font-texto);
+    }
+  }
+
+  div.imagens-sobre {
+    width: 700px;
+    display: flex;
+
+    img#maior {
+      width: 275px;
+      height: 410px;
+    }
+  }
+}
+
+section.skill-e-habildades {
+  margin: 0 auto;
+  max-width: 1400px;
+
+  h1 {
+    text-align: center;
+    margin: 75px 0px 50px 0px;
+    font-family: var(--font-titulo);
+    font-size: var(--tamanho-font-titulo);
+
+    span {
+      color: var(--cor-primaria);
+    }
+  }
+
+  div.skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 75px;
+    gap: 20px;
+
+    div.habilidades {
+      box-shadow: 0px 0px 7px var(--cor-primaria);
+      width: 420px;
+      height: 500px;
+      padding: 20px;
+      border-radius: 10px;
+      position: relative;
+      transition: 0.3s ease-in-out;
+
+      img {
+        width: 250px;
+        height: 200px;
+        position: absolute;
+        right: 50%;
+      }
+
+      h2 {
+        font-family: var(--font-titulo);
+        font-size: var(--tamanho-font-media);
+        margin-top: 200px;
+      }
+
+      p {
+        font-size: var(--tamanho-font-texto);
+        font-family: var(--font-texto);
+        text-align: justify;
+      }
+    }
+
+    div.habilidades:hover {
+      box-shadow: 0px 0px 15px var(--cor-primaria);
+      transform: scale(1.05);
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+
+  div.skills:hover > :not(:hover) {
+    opacity: 0.5;
+    transform: scale(0.97);
+  }
+}
+
+section.tecnologias {
+  display: grid;
+  place-items: center;
+
+  h1 {
+    text-align: center;
+    font-family: var(--font-titulo);
+    font-size: var(--tamanho-font-titulo);
+    margin-bottom: 50px;
+  }
+
+  span {
+    color: var(--cor-primaria);
+  }
+
+  div.exp-tec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    div.roda-de-tecnologia {
+      border-radius: 50%;
+      width: 500px;
+      height: 500px;
+      border: 2px solid var(--cor-primaria);
+      position: relative;
+      animation: girar-roda 20s linear infinite;
+      margin-top: 75px;
+      margin-left: 150px;
+    }
+
+    div.roda-de-tecnologia {
+      div.circulo {
+        background-color: var(--cor-segundaria);
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        padding: 35px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -50px;
+        margin-left: -50px;
+        box-shadow: 0px 0px 10px var(--cor-primaria);
+
+        animation: girar-contrario 20s linear infinite;
+      }
+
+      div.circulo:hover {
+        img {
+          width: 65px;
+          height: 65px;
+        }
+      }
+
+      img {
+        transition: 0.3s ease-in-out;
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    /* REORGANIZAÇÃO: Ângulos ajustados para 6 itens (60 graus de separação) */
+    div.roda-de-tecnologia div.circulo:nth-child(1) {
+      transform: rotate(0deg) translateY(-250px);
+    }
+
+    div.roda-de-tecnologia div.circulo:nth-child(2) {
+      transform: rotate(60deg) translateY(-250px);
+    }
+
+    div.roda-de-tecnologia div.circulo:nth-child(3) {
+      transform: rotate(120deg) translateY(-250px);
+    }
+
+    div.roda-de-tecnologia div.circulo:nth-child(4) {
+      transform: rotate(180deg) translateY(-250px);
+    }
+
+    div.roda-de-tecnologia div.circulo:nth-child(5) {
+      transform: rotate(240deg) translateY(-250px);
+    }
+
+    div.roda-de-tecnologia div.circulo:nth-child(6) {
+      transform: rotate(300deg) translateY(-250px);
+    }
+
+    div.tempo-de-experiencia {
+      display: flex;
+      flex-wrap: wrap;
+      width: 1000px;
+      margin-left: 100px;
+
+      div.experiencia {
+        width: 400px;
+        height: 200px;
+        margin: 10px;
+        box-shadow: 0px 0px 10px var(--cor-primaria);
+        border-radius: 10px;
+        transition: 0.3s ease-in-out;
+      }
+
+      div.experiencia:hover {
+        box-shadow: 0px 0px 15px var(--cor-primaria);
+        transform: scale(1.05);
+      }
+
+      img {
+        width: 50px;
+        height: 50px;
+        margin: 15px;
+      }
+
+      h1 {
+        font-size: var(--tamanho-font-media);
+        margin-bottom: 0px;
+      }
+
+      p {
+        text-align: center;
+        font-family: var(--font-texto);
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+section.projetos-pessoais {
+  display: grid;
+  place-items: center;
+
+  h1 {
+    text-align: center;
+    font-family: var(--font-titulo);
+    font-size: var(--tamanho-font-titulo);
+    margin-bottom: 50px;
+
+    span {
+      color: var(--cor-primaria);
+    }
+  }
+
+  div.projetos {
+    width: 1000px;
+    height: 400px;
+    box-shadow: 0px 0px 10px var(--cor-primaria);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    img {
+      width: 500px;
+      height: 300px;
+      box-shadow: 0px 0px 10px;
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    div.txt-projetos {
+      padding: 10px;
+
+      h1 {
+        font-size: var(--tamanho-font-titulo);
+      }
+
+      p {
+        font-family: var(--font-texto);
+        text-align: justify;
+        padding-right: 20px;
+      }
+
+      div.botoes {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        gap: 50px;
+
+        button {
+          padding: 15px;
+          border: none;
+          border-radius: 5px;
+          font-size: 12pt;
+          transition: 0.3s ease-in-out;
+          box-shadow: 0px 0px 5px var(--background-dark);
+        }
+
+        button:hover {
+          transform: scale(1.1);
+          background-color: var(--cor-primaria);
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  div.projetos img:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+  }
+}
+
+section.projetos-profissionais {
+  display: grid;
+  place-items: center;
+
+  h1 {
+    text-align: center;
+    font-family: var(--font-titulo);
+    font-size: var(--tamanho-font-titulo);
+    margin-bottom: 50px;
+
+    span {
+      color: var(--cor-primaria);
+    }
+  }
+
+  div.projetos {
+    width: 1000px;
+    height: 400px;
+    box-shadow: 0px 0px 10px var(--cor-primaria);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    div.fundo-branco {
+      width: 500px;
+      height: 300px;
+      box-shadow: 0px 0px 10px;
+      margin: 20px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+
+      div.faixa-em-breve {
+        width: 100%;
+        height: 100px;
+        background-color: var(--cor-primaria);
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        font-family: var(--font-titulo);
+        font-size: 20pt;
+        color: white;
+      }
+    }
+
+    div.txt-projetos {
+      padding: 10px;
+      display: grid;
+
+      h1 {
+        font-size: var(--tamanho-font-titulo);
+      }
+
+      p {
+        font-family: var(--font-texto);
+        text-align: justify;
+      }
+    }
+  }
+}
+
+.combined-footer {
+  margin-top: 100px;
+  width: 100%;
+  padding: 40px 20px;
+  background-color: var(--background-dark);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 2px solid var(--cor-primaria);
+  gap: 40px;
+}
+
+.logo-area {
+  text-align: center;
+  max-width: 500px;
+}
+
+.logo-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.contact-area {
+  padding: 20px;
+  border-radius: 8px;
+  text-align: left;
+  max-width: 500px;
+  color: white;
+
+  h2 {
+    color: var(--cor-secundaria);
+    font-family: var(--font-titulo);
+    font-size: var(--tamanho-font-media);
+    margin-bottom: 20px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      font-size: var(--tamanho-font-texto);
+
+      img {
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+      }
+
+      a {
+        color: var(--cor-secundaria);
+        text-decoration: none;
+        transition: color 0.3s ease;
+        font-family: var(--font-texto);
+
+        &:hover {
+          color: var(--cor-terciaria);
+        }
+      }
+    }
+  }
+}
+/* ANIMÇÕES */
+@keyframes girar-roda {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slide-in-fwd-right {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes swing-in-top-fwd {
+  0% {
+    transform: rotateX(-100deg);
+    transform-origin: top;
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotateX(0deg);
+    transform-origin: top;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.js-animado {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.js-animado.animar {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* A seção "Sobre Mim" e seu conteúdo */
+.sobre-mim .js-animado {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.sobre-mim .js-animado.animar {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* As imagens da seção "Sobre Mim" */
+.sobre-mim .imagens-sobre .js-animado {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.sobre-mim .imagens-sobre .js-animado.animar {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* As caixas de habilidades */
+.habilidades.js-animado {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.habilidades.js-animado.animar {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* As caixas de experiência em tecnologia */
+.experiencia.js-animado {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.experiencia.js-animado.animar {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* As seções de projetos */
+.projetos.js-animado {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.projetos.js-animado.animar {
+  opacity: 1;
+  transform: translateY(0);
+}
